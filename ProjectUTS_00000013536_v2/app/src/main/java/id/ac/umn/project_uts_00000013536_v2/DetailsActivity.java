@@ -39,7 +39,6 @@ public class DetailsActivity extends AppCompatActivity {
         // Ambil ID Buku
         Bundle bundle = getIntent().getExtras();
         asin = bundle.getString("asin");
-        Toast.makeText(DetailsActivity.this, asin, Toast.LENGTH_SHORT).show();
 
         // External Library Orang Ini
         blurImageView = findViewById(R.id.book_image);
