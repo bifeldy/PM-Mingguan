@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Project-UTS_00000013536_v2</string>
+
+    <!-- Strings related to login -->
+    <string name="txtUser">Username</string>
+    <string name="txtPass">Password</string>
+    <string name="btnLogin">Sign in</string>
+
+    <!-- Login credential -->
+    <string name="userId">user</string>
+    <string name="userPass">useruser</string>
+
+    <!-- Strings related to menu -->
+    <string name="action_logout">Sign Out</string>
+    <string-array name="action_order_by">
+        <item>Asin</item>
+        <item>Author</item>
+        <item>Title</item>
+    </string-array>
+
+    <string name="title_activity_about">About Me</string>
+    <string name="title_activity_favorites">My Favorites</string>
+    <string name="title_activity_details">Information</string>
+    <string name="title_activity_data">My Libraries</string>
+
+</resources>

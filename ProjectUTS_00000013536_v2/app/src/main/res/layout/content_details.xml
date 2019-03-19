@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DetailsActivity"
+    tools:showIn="@layout/activity_details">
+
+    <com.jgabrielfreitas.core.BlurImageView
+        android:id="@+id/book_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/books" />
+
+    <EditText
+        android:id="@+id/book_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:editable="false"
+        android:ems="10"
+        android:hint="Ini Judul Buku"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:text="ASIN" />
+
+            <EditText
+                android:id="@+id/book_asin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Book ASIN ID"
+                android:editable="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:text="Group" />
+
+            <EditText
+                android:id="@+id/book_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Book Groups"
+                android:editable="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:text="Format" />
+
+            <EditText
+                android:id="@+id/book_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Book Format"
+                android:editable="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:text="Author" />
+
+            <EditText
+                android:id="@+id/book_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Book Author"
+                android:editable="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:text="Publisher" />
+
+            <EditText
+                android:id="@+id/book_publisher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Book Publisher"
+                android:editable="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
