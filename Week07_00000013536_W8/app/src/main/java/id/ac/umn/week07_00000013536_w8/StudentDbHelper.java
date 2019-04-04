@@ -1,4 +1,4 @@
-package id.ac.umn.week07_00000013536;
+package id.ac.umn.week07_00000013536_w8;
 
 import android.content.ContentValues;
 import android.content.Context;
