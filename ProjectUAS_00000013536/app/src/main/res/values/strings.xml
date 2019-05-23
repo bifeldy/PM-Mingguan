@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ProjectUAS_00000013536</string>
+    <string name="app_version">v0.99-BetA_Test!</string>
+
+    <string name="title_activity_main">MainActivity</string>
+</resources>
