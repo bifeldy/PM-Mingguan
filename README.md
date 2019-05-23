@@ -1,6 +1,8 @@
 # PM-Mingguan
 Tugas Pemrograman Mobile Mingguan + Project UTS/UAS
 
+<hr />
+
 <div style="width: 100%;">
   <p align="center">
     <img align="left" width="100" src="Images/ProjectUTS_00000013536_v2-01.png" />
@@ -11,8 +13,9 @@ Tugas Pemrograman Mobile Mingguan + Project UTS/UAS
   </p>
 
   ProjectUTS_00000013536_v2
+
 </div>
 
-<br /><br /><br />
+<br /><br /><br /><br />
 <hr />
 
