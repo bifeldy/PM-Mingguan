@@ -1,6 +1,29 @@
 <resources>
-    <string name="app_name">ProjectUAS_00000013536</string>
+    <string name="app_name">MyAnimeList_13536</string>
     <string name="app_version">v0.99-BetA_Test!</string>
+    <string name="app_author">Basilius Bias Astho Christyono</string>
 
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Main Activity</string>
+    <string name="title_activity_about">About Me!</string>
+    <string name="title_activity_login">Please Login!</string>
+
+    <string name="splash_login_info">Hai, Silahkan Login Terlebih Dahulu! ^_^.~</string>
+    <string name="register_info">Ayo, Daftar Sekarang! ^_^.~</string>
+    <string name="about_library_list">Daftar Library Yang Digunakan</string>
+
+    <string name="txtUser">Nama Pengguna</string>
+    <string name="txtPass">Kata Sandi</string>
+    <string name="txtPassReg">Buat Kata Sandi</string>
+    <string name="txtRePassReg">Ketik Ulang Kata Sandi</string>
+    <string name="btnLogin">Masuk</string>
+    <string name="btnRegister">Daftar</string>
+    <string name="btnHaveAccount">Sudah Punya Akun</string>
+
+    <string name="action_menu_about">About</string>
+    <string name="action_menu_linkedin">LinkedIn</string>
+    <string name="action_menu_github">GitHub</string>
+    <string name="action_menu_facebook">FaceBook</string>
+    <string name="action_menu_twitter">Twitter</string>
+    <string name="action_menu_line">LINE</string>
+
 </resources>
