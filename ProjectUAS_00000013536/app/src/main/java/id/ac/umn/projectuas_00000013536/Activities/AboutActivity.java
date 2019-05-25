@@ -1,4 +1,4 @@
-package id.ac.umn.projectuas_00000013536;
+package id.ac.umn.projectuas_00000013536.Activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import id.ac.umn.projectuas_00000013536.R;
 
 public class AboutActivity extends AppCompatActivity {
 
