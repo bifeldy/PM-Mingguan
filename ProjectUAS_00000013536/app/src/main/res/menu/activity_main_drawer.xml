@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_seasonal"
+            android:icon="@drawable/ic_seasonal"
+            android:title="@string/menu_seasonal" />
+        <item
+            android:id="@+id/nav_top"
+            android:icon="@drawable/ic_top"
+            android:title="@string/menu_top" />
+    </group>
+
+    <item android:title="Miscellaneous">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_about"
+                android:title="@string/menu_about" />
+        </menu>
+    </item>
+
+</menu>
