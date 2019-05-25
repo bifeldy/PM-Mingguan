@@ -33,10 +33,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        // Get Data From Shared Preferences
-        userInfo = mContext.getSharedPreferences(PREFERENCES_FILENAME, PREFERENCES_MODE);
-        editor = userInfo.edit();
-
     }
 
     @Override
@@ -138,6 +134,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         if(count == 1) {
 
+            // Get Data From Shared Preferences
+            userInfo = mContext.getSharedPreferences(PREFERENCES_FILENAME, PREFERENCES_MODE);
+            editor = userInfo.edit();
+
             editor.putString(KEY_USERNAME, username);
             editor.putString(KEY_PASSWORD, password);
 
@@ -150,6 +150,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void logout() {
+
+        // Get Data From Shared Preferences
+        userInfo = mContext.getSharedPreferences(PREFERENCES_FILENAME, PREFERENCES_MODE);
+        editor = userInfo.edit();
 
         editor.putString(KEY_USERNAME, "");
         editor.putString(KEY_PASSWORD, "");

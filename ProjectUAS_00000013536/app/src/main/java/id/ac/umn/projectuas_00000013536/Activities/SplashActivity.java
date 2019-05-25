@@ -1,4 +1,4 @@
-package id.ac.umn.projectuas_00000013536;
+package id.ac.umn.projectuas_00000013536.Activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +15,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import id.ac.umn.projectuas_00000013536.DatabaseHelper;
+import id.ac.umn.projectuas_00000013536.R;
+import id.ac.umn.projectuas_00000013536.Utility;
+
 public class SplashActivity extends AppCompatActivity implements View.OnClickListener {
 
     // Shared Preferences
@@ -22,7 +26,6 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
     private static final int PREFERENCES_MODE = Context.MODE_PRIVATE;
     private static final String KEY_USERNAME = "USERNAME";
     private static final String KEY_PASSWORD = "PASSWORD";
-
     private SharedPreferences userInfo;
     private String userNameInfo, userPassInfo;
 
@@ -58,6 +61,7 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
         // Click Listener
         btnLoginSplashScreen.setOnClickListener(this);
         btnRegisterSplashScreen.setOnClickListener(this);
+        btnAboutSplashScreen.setOnClickListener(this);
 
         // Default
         txtInfoSplashScreen.setVisibility(View.GONE);
@@ -65,7 +69,7 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
         txtPassSplashScreen.setVisibility(View.GONE);
         btnLoginSplashScreen.setVisibility(View.GONE);
         btnRegisterSplashScreen.setVisibility(View.GONE);
-        btnAboutSplashScreen.setOnClickListener(this);
+        btnAboutSplashScreen.setVisibility(View.GONE);
 
         // Import Database
         mDBHelper = new DatabaseHelper(this);
@@ -156,6 +160,17 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                                 btnRegisterSplashScreen.setVisibility(View.VISIBLE);
                             }
                         });
+
+                        // Show Button About
+                        btnAboutSplashScreen.post(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                // Show Button
+                                btnAboutSplashScreen.startAnimation(animation);
+                                btnAboutSplashScreen.setVisibility(View.VISIBLE);
+                            }
+                        });
                     }
                     else {
                         loginSuccess();
@@ -244,8 +259,8 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
     private void loginSuccess() {
 
         // Go To Main Activity
-//        Intent intent = new Intent(this, LoginActivity.class);
-//        startActivity(intent);
-//        finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

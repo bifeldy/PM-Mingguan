@@ -1,4 +1,4 @@
-package id.ac.umn.projectuas_00000013536;
+package id.ac.umn.projectuas_00000013536.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +13,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import id.ac.umn.projectuas_00000013536.DatabaseHelper;
+import id.ac.umn.projectuas_00000013536.R;
+import id.ac.umn.projectuas_00000013536.Utility;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -80,10 +84,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch (item.getItemId()) {
 
             case R.id.default_activity_menu_about:
+
                 // Go To About Activity
                 intent = new Intent(RegisterActivity.this, AboutActivity.class);
                 startActivity(intent);
-                break;
+                return true;
         }
 
         // Back To Parent Activity
@@ -129,7 +134,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 information = "Username Telah Terpakai.";
             }
             else if (!password.equals(rePassword)) {
-                information = "Password Yang Anda Masukkan Tidak Sesuai.";
+                information = "Password Tidak Sesuai.";
             }
             else {
                 mDBHelper.addUser(username, password);

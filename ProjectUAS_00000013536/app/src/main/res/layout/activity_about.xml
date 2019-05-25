@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutActivity"
-    android:orientation="vertical">
+    tools:context=".Activities.AboutActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -70,7 +69,10 @@
                 android:background="@color/colorAccent"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_margin="@dimen/activity_margin" />
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="@dimen/activity_margin"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_marginRight="@dimen/activity_margin" />
 
             <ScrollView
                 android:layout_width="match_parent"

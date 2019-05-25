@@ -56,7 +56,7 @@ public class Utility {
                                     Gravity.NO_GRAVITY
 
                             );
-                            params.setMargins(0, 128, 0, 0);
+                            params.setMargins(0, 144, 0, 0);
                             rootView.setLayoutParams(params);
 
                             // Hide Logo & Title
