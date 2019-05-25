@@ -1,0 +1,32 @@
+
+  -- Jikan -- MyAnimeList --
+
+======================================================================================================
+
+  INTRODUCTION
+
+  Jikan is an Unofficial MyAnimeList REST-ful API.
+  It's built on the Lumen microframework, uses Redis for caching and is powered by the Jikan PHP API
+
+  Base API URL: https://api.jikan.moe/v3
+
+  Site URL: https://jikan.moe/
+  -> https://jikan.docs.apiary.io/
+
+======================================================================================================
+
+  TL;DR
+
+  API Official MyAnimeList API Sedang Diperbaharui Dan Dalam Tahap Maintenance.
+  Dan Hanya Bisa Narik Data Publik, Tidak Bisa Login Akun MAL Via API
+  -> https://myanimelist.net/forum/?topicid=1740204
+
+  Jadi Saya Pakai Pihak Ketiga Yaitu `Jikan` Untuk GET Data Saja.
+
+  AppSaya <--> Jikan <--> MyAnimeList
+
+======================================================================================================
+
+  -- Basilius Bias Astho Christyono -- 000.000.13536 --
+
+======================================================================================================
