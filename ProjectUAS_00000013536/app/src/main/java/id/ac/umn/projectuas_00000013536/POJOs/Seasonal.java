@@ -11,6 +11,8 @@ public class Seasonal {
     private int season_year;
     private List<SeasonalAnime> anime;
 
+    public Seasonal() {}
+
     public Seasonal(String request_hash, boolean request_cached, int request_cache_expiry, String season_name, int season_year, List<SeasonalAnime> anime) {
         this.request_hash = request_hash;
         this.request_cached = request_cached;

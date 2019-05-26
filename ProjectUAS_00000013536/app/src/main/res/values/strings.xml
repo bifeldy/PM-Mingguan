@@ -18,15 +18,14 @@
     <string name="btnLogin">Masuk</string>
     <string name="btnRegister">Daftar</string>
 
-    <string name="action_menu_about">About</string>
     <string name="action_menu_linkedin">LinkedIn</string>
     <string name="action_menu_github">GitHub</string>
     <string name="action_menu_facebook">FaceBook</string>
     <string name="action_menu_twitter">Twitter</string>
     <string name="action_menu_line">LINE</string>
 
-    <string name="action_menu_settings">Pengaturan</string>
     <string name="action_menu_logout">Keluar</string>
+    <string name="action_menu_about">About</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -37,5 +36,21 @@
     <string name="menu_seasonal">Seasonal Anime</string>
     <string name="menu_top">Top Anime</string>
     <string name="menu_about">About</string>
+
+    <string name="seasonal_information">Fetching Data From Server ...</string>
+    <string name="season_prompt">Pilih Salah Satu!</string>
+    <string-array name="season_type">
+        <item>Winter (Jan-Mar)</item>
+        <item>Spring (Apr-Jun)</item>
+        <item>Summer (Jul-Sept)</item>
+        <item>Fall (Oct-Dec)</item>
+    </string-array>
+    <string-array name="season_year">
+        <item>Later</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>....</item>
+        <item>1917</item>
+    </string-array>
 
 </resources>

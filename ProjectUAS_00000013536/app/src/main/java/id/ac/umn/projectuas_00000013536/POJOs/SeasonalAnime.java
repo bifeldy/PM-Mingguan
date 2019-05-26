@@ -22,6 +22,8 @@ public class SeasonalAnime {
     private boolean kids;
     private boolean continuing;
 
+    public SeasonalAnime() {}
+
     public SeasonalAnime(int mal_id, String url, String title, String image_url, String synopsis, String type, String airing_start, int episodes, int members, List<Genre> genres, String source, List<Producer> producers, double score, List<String> licensors, boolean r18, boolean kids, boolean continuing) {
         this.mal_id = mal_id;
         this.url = url;

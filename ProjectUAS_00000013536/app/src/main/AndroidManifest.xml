@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="id.ac.umn.projectuas_00000013536">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,6 +12,7 @@
         android:roundIcon="@drawable/maido"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Activities.DetailActivity"></activity>
         <activity android:name=".Activities.RegisterActivity" />
         <activity
             android:name=".Activities.SplashActivity"
@@ -25,8 +27,7 @@
             android:label="@string/title_activity_about" />
         <activity
             android:name=".Activities.MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:label="@string/title_activity_main"/>
     </application>
 
 </manifest>

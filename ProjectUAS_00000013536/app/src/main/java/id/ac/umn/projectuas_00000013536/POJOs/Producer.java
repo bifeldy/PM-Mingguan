@@ -7,6 +7,8 @@ public class Producer {
     private String name;
     private String url;
 
+    public Producer() {}
+
     public Producer(int mal_id, String type, String name, String url) {
         this.mal_id = mal_id;
         this.type = type;

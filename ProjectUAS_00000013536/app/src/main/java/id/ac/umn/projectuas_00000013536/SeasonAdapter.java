@@ -1,6 +1,7 @@
 package id.ac.umn.projectuas_00000013536;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,6 +20,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import id.ac.umn.projectuas_00000013536.Activities.DetailActivity;
 import id.ac.umn.projectuas_00000013536.POJOs.SeasonalAnime;
 
 public class SeasonAdapter extends RecyclerView.Adapter<SeasonAdapter.SeasonViewHolder> implements Filterable {
@@ -50,14 +52,20 @@ public class SeasonAdapter extends RecyclerView.Adapter<SeasonAdapter.SeasonView
 
         Glide.with(recyclerContext)
             .load(seasonalAnime.getImage_url())
-            .transition(DrawableTransitionOptions.withCrossFade(1234)) // Transition Effect Load Image
+            .transition(DrawableTransitionOptions.withCrossFade(250)) // Transition Effect Load Image
             .apply(
                 new RequestOptions()
                 .override(175, 247)
             ).into(seasonViewHolder.seasonal_image);
 
         seasonViewHolder.seasonal_title.setText(seasonalAnime.getTitle());
-        seasonViewHolder.seasonal_score.setText(Double.toString(seasonalAnime.getScore()));
+
+        if(seasonalAnime.getScore() == 0) {
+            seasonViewHolder.seasonal_score.setText("--");
+        }
+        else {
+            seasonViewHolder.seasonal_score.setText(Double.toString(seasonalAnime.getScore()));
+        }
 
         String pattern = "###,###.###";
         DecimalFormat decimalFormat = new DecimalFormat(pattern);
@@ -69,9 +77,18 @@ public class SeasonAdapter extends RecyclerView.Adapter<SeasonAdapter.SeasonView
             public void onClick(View v) {
 
                 // Open Detail Activity And Passing ID
-//                Intent intent = new Intent(recyclerContext, DetailActivity.class);
-//                intent.putExtra("productId", seasonalAnime.getMal_id());
-//                recyclerContext.startActivity(intent);
+                Intent intent = new Intent(recyclerContext, DetailActivity.class);
+                intent.putExtra("productId", seasonalAnime.getMal_id());
+                recyclerContext.startActivity(intent);
+            }
+        });
+
+        seasonViewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                // TODO: Long Click Notif
+                return true;
             }
         });
     }

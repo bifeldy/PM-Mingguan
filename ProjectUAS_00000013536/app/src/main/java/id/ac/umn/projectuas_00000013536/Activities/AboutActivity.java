@@ -34,6 +34,7 @@ public class AboutActivity extends AppCompatActivity {
             "com.android.support:cardview-v7:28.0.0\n" +
             "\n" +
             "com.github.bumptech.glide:glide:4.9.0\n" +
+            "com.android.volley:volley:1.1.1" +
             "\n"
         );
     }

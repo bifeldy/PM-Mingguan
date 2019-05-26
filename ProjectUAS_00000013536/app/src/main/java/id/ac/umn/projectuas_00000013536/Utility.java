@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Calendar;
 
 public class Utility {
 
@@ -120,5 +121,21 @@ public class Utility {
                 Toast.makeText(context, "Gagal Membuka Database", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    public static String getSeasonMonth(int season) {
+
+        String seasons[] = {
+                "winter",
+                "spring",
+                "summer",
+                "fall",
+        };
+
+        if(season < 0 || season >= seasons.length) {
+            return seasons[Calendar.getInstance().get(Calendar.MONTH) / seasons.length];
+        }
+
+        return seasons[season];
     }
 }

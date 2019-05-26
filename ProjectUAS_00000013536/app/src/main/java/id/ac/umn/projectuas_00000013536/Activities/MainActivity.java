@@ -5,10 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
@@ -18,8 +15,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,26 +53,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // UI Object
     private ImageView userImg;
     private TextView userName, userEmail;
+
+    /*
     Snackbar snackBar;
 
-    // Window Setting;
-    Window window;
+    // SnackBar
+    snackBar = Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_INDEFINITE);
+    snackBar.setAction("Dismiss", new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            // Close SnackBar
+            snackBar.dismiss();
+        }
+    });
+    snackBar.show();
+
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // Make Full Screen With Translucent
-        window = getWindow();
-        window.setFlags(
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        );
-
-        // Show Toolbar
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         // Find UI
         drawer = findViewById(R.id.drawer_layout);
@@ -87,13 +84,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle = new ActionBarDrawerToggle(
                 this,
                 drawer,
-                toolbar,
                 R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close
         );
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Force To Open List Of Product When App Firstly Opened
         navigationView.setCheckedItem(R.id.nav_seasonal);
@@ -109,25 +106,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         userImg = navigationView.getHeaderView(0).findViewById(R.id.userImg);
         userName = navigationView.getHeaderView(0).findViewById(R.id.userName);
         userEmail = navigationView.getHeaderView(0).findViewById(R.id.userEmail);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                // SnackBar
-                snackBar = Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_INDEFINITE);
-                snackBar.setAction("Dismiss", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        // Close SnackBar
-                        snackBar.dismiss();
-                    }
-                });
-                snackBar.show();
-            }
-        });
 
         // Load User Login Info Into Nav Menu Profile
         Glide.with(this)
@@ -197,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_main_settings) {
+        if (toggle.onOptionsItemSelected(item)) {
             return true;
         }
         else if(id == R.id.action_main_logout) {

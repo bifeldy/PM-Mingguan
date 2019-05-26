@@ -7,6 +7,8 @@ public class Genre {
     private String name;
     private String url;
 
+    public Genre() {}
+
     public Genre(int mal_id, String type, String name, String url) {
         this.mal_id = mal_id;
         this.type = type;
