@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyAnimeList_13536</string>
+    <string name="app_name">JikanMAL_13536</string>
     <string name="app_version">v0.99-BetA_Test!</string>
     <string name="app_author">Basilius Bias Astho Christyono</string>
     <string name="partner">+ Jikan MyAnimeList API"</string>
@@ -40,7 +40,7 @@
     <string name="menu_top">Top Anime</string>
     <string name="menu_about">About</string>
 
-    <string name="seasonal_information">Fetching Data From Server ...</string>
+    <string name="seasonal_information">Mengambil Data Dari Server ...</string>
     <string-array name="season_type">
         <item>Winter (Jan-Mar)</item>
         <item>Spring (Apr-Jun)</item>
@@ -54,5 +54,7 @@
         <item>....</item>
         <item>1917</item>
     </string-array>
+
+    <string name="top_information">Fitur Belum Ada Bro!</string>
 
 </resources>

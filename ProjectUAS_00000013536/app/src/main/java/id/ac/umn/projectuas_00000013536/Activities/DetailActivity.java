@@ -1,8 +1,14 @@
 package id.ac.umn.projectuas_00000013536.Activities;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -50,6 +57,7 @@ public class DetailActivity extends AppCompatActivity {
     private TextView detail_anime_favorites;
 
     private TextView detail_information;
+    FloatingActionButton detail_floating_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,13 +94,64 @@ public class DetailActivity extends AppCompatActivity {
         detail_anime_favorites = findViewById(R.id.detail_anime_favorites);
 
         detail_information = findViewById(R.id.detail_information);
+        detail_floating_button = findViewById(R.id.detail_floating_button);
+        detail_floating_button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(DetailActivity.this, detailAPI.getDetailAnime().getTitle(), Toast.LENGTH_SHORT).show();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent notificationIntent = new Intent(DetailActivity.this, DetailActivity.class);
+                        notificationIntent.putExtra("mal_id", detailAPI.getDetailAnime().getMal_id());
+
+                        PendingIntent contentIntent = PendingIntent.getActivity(
+                                DetailActivity.this,
+                                0,
+                                notificationIntent,
+                                PendingIntent.FLAG_UPDATE_CURRENT
+                        );
+
+                        Intent malIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(detailAPI.getDetailAnime().getUrl()));
+
+                        PendingIntent malContent = PendingIntent.getActivity(
+                                DetailActivity.this,
+                                0,
+                                malIntent,
+                                PendingIntent.FLAG_UPDATE_CURRENT
+                        );
+
+                        String text = "#" + detailAPI.getDetailAnime().getMal_id() + " ~ " + detailAPI.getDetailAnime().getType() + " ~ " + detailAPI.getDetailAnime().getEpisodes() + " Episodes";
+
+                        Notification.Builder builder = new Notification.Builder(DetailActivity.this)
+                                .setSmallIcon(R.drawable.maido2)
+                                .setStyle(new Notification.BigTextStyle()
+                                        .bigText(detailAPI.getDetailAnime().getSynopsis())
+                                        .setBigContentTitle(detailAPI.getDetailAnime().getTitle())
+                                        .setSummaryText(text)
+                                )
+                                .setContentTitle(detailAPI.getDetailAnime().getTitle())
+                                .setContentText(text)
+                                .setPriority(Notification.PRIORITY_HIGH)
+                                .setColor(Color.BLUE)
+                                .addAction(0, "Lihat Di MyAnimeList!", malContent);
+
+                        NotificationManager manager = (NotificationManager) DetailActivity.this.getSystemService(Context.NOTIFICATION_SERVICE);
+                        manager.notify(0, builder.build());
+                    }
+                }, 5000);
+            }
+        });
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        String loadingInfo = "Fetching Data From Server ...";
+        String loadingInfo = "Mengambil Data Dari Server ...";
         detail_information.setVisibility(View.VISIBLE);
         detail_information.setText(loadingInfo);
         detail_information.setTextColor(Color.GREEN);

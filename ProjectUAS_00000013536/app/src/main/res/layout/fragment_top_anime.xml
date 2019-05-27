@@ -6,10 +6,28 @@
     tools:context=".Fragments.TopAnimeFragment"
     android:paddingTop="@dimen/fragment_padding">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/top_anime_recycler"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/top_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/top_information"
+            android:textSize="16sp"
+            android:padding="4dp"
+            android:textColor="#ffff00"
+            android:background="#11000000" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/top_anime_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
 
 </FrameLayout>

@@ -152,7 +152,7 @@ public class SeasonalAnimeFragment extends Fragment {
 
     private void loadSeasonalAnime() {
 
-        String loadingInfo = "Fetching Data From Server ...";
+        String loadingInfo = "Mengambil Data Dari Server ...";
         seasonal_information.setVisibility(View.VISIBLE);
         seasonal_information.setText(loadingInfo);
         seasonal_information.setTextColor(Color.GREEN);

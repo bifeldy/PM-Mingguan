@@ -1,7 +1,13 @@
 package id.ac.umn.projectuas_00000013536;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +17,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
@@ -86,7 +93,51 @@ public class SeasonAdapter extends RecyclerView.Adapter<SeasonAdapter.SeasonView
             @Override
             public boolean onLongClick(View v) {
 
-                // TODO: Long Click Notif
+                Toast.makeText(recyclerContext, seasonalAnime.getTitle(), Toast.LENGTH_SHORT).show();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent notificationIntent = new Intent(recyclerContext, DetailActivity.class);
+                        notificationIntent.putExtra("mal_id", seasonalAnime.getMal_id());
+
+                        PendingIntent contentIntent = PendingIntent.getActivity(
+                                recyclerContext,
+                                0,
+                                notificationIntent,
+                                PendingIntent.FLAG_UPDATE_CURRENT
+                        );
+
+                        Intent malIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(seasonalAnime.getUrl()));
+
+                        PendingIntent malContent = PendingIntent.getActivity(
+                                recyclerContext,
+                                0,
+                                malIntent,
+                                PendingIntent.FLAG_UPDATE_CURRENT
+                        );
+
+                        String text = "#" + seasonalAnime.getMal_id() + " ~ " + seasonalAnime.getType() + " ~ " + seasonalAnime.getEpisodes() + " Episodes";
+
+                        Notification.Builder builder = new Notification.Builder(recyclerContext)
+                            .setSmallIcon(R.drawable.maido2)
+                            .setStyle(new Notification.BigTextStyle()
+                                .bigText(seasonalAnime.getSynopsis())
+                                .setBigContentTitle(seasonalAnime.getTitle())
+                                .setSummaryText(text)
+                            )
+                            .setContentTitle(seasonalAnime.getTitle())
+                            .setContentText(text)
+                            .setPriority(Notification.PRIORITY_HIGH)
+                            .setColor(Color.BLUE)
+                            .addAction(0, "Lihat Di MyAnimeList!", malContent);
+                        builder.setContentIntent(contentIntent);
+
+                        NotificationManager manager = (NotificationManager) recyclerContext.getSystemService(Context.NOTIFICATION_SERVICE);
+                        manager.notify(0, builder.build());
+                    }
+                }, 5000);
+
                 return true;
             }
         });
