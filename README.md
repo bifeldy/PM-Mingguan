@@ -22,13 +22,13 @@ Tugas Pemrograman Mobile Mingguan + Project UTS/UAS
 
 <div style="width: 100%;">
   <p align="center">
-    <img align="left" width="100" src="Images/ProjectUTS_00000013536-01.jpg" />
-    <img align="left" width="100" src="Images/ProjectUTS_00000013536-02.jpg" />
-    <img align="left" width="100" src="Images/ProjectUTS_00000013536-03.jpg" />
-    <img align="left" width="100" src="Images/ProjectUTS_00000013536-04.jpg" />
-    <img align="left" width="100" src="Images/ProjectUTS_00000013536-05.jpg" />
-    <img align="left" width="100" src="Images/ProjectUTS_00000013536-06.jpg" />
-    <img align="left" width="100" src="Images/ProjectUTS_00000013536-07.jpg" />
+    <img align="left" width="100" src="Images/ProjectUAS_00000013536-01.jpg" />
+    <img align="left" width="100" src="Images/ProjectUAS_00000013536-02.jpg" />
+    <img align="left" width="100" src="Images/ProjectUAS_00000013536-03.jpg" />
+    <img align="left" width="100" src="Images/ProjectUAS_00000013536-04.jpg" />
+    <img align="left" width="100" src="Images/ProjectUAS_00000013536-05.jpg" />
+    <img align="left" width="100" src="Images/ProjectUAS_00000013536-06.jpg" />
+    <img align="left" width="100" src="Images/ProjectUAS_00000013536-07.jpg" />
   </p>
 
 
