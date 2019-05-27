@@ -36,7 +36,7 @@ Tugas Pemrograman Mobile Mingguan + Project UTS/UAS
 
 </div>
 
-<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br />
 
 ProjectUAS_00000013536
 > `Anime List with Jikan MyAnimeList API`
