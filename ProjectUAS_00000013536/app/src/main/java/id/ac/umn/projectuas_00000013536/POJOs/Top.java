@@ -20,28 +20,28 @@ public class Top {
         return request_hash;
     }
 
-    public boolean isRequest_cached() {
-        return request_cached;
-    }
-
-    public int getRequest_cache_expiry() {
-        return request_cache_expiry;
-    }
-
-    public List<TopAnime> getTop() {
-        return top;
-    }
-
     public void setRequest_hash(String request_hash) {
         this.request_hash = request_hash;
+    }
+
+    public boolean isRequest_cached() {
+        return request_cached;
     }
 
     public void setRequest_cached(boolean request_cached) {
         this.request_cached = request_cached;
     }
 
+    public int getRequest_cache_expiry() {
+        return request_cache_expiry;
+    }
+
     public void setRequest_cache_expiry(int request_cache_expiry) {
         this.request_cache_expiry = request_cache_expiry;
+    }
+
+    public List<TopAnime> getTop() {
+        return top;
     }
 
     public void setTop(List<TopAnime> top) {

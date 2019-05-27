@@ -12,7 +12,6 @@
         android:roundIcon="@drawable/maido"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.DetailActivity"></activity>
         <activity android:name=".Activities.RegisterActivity" />
         <activity
             android:name=".Activities.SplashActivity"
@@ -28,6 +27,9 @@
         <activity
             android:name=".Activities.MainActivity"
             android:label="@string/title_activity_main"/>
+        <activity
+            android:name=".Activities.DetailActivity"
+            android:label="@string/title_activity_detail"/>
     </application>
 
 </manifest>

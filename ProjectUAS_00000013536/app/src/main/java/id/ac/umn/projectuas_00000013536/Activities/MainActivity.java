@@ -15,6 +15,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,9 +39,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     // Database Helper
     private DatabaseHelper mDBHelper;
-
-    // Action Bar
-    private Toolbar toolbar;
 
     // Left NavMenu
     private DrawerLayout drawer;

@@ -26,44 +26,44 @@ public class Seasonal {
         return request_hash;
     }
 
-    public boolean isRequest_cached() {
-        return request_cached;
-    }
-
-    public int getRequest_cache_expiry() {
-        return request_cache_expiry;
-    }
-
-    public String getSeason_name() {
-        return season_name;
-    }
-
-    public int getSeason_year() {
-        return season_year;
-    }
-
-    public List<SeasonalAnime> getAnime() {
-        return anime;
-    }
-
     public void setRequest_hash(String request_hash) {
         this.request_hash = request_hash;
+    }
+
+    public boolean isRequest_cached() {
+        return request_cached;
     }
 
     public void setRequest_cached(boolean request_cached) {
         this.request_cached = request_cached;
     }
 
+    public int getRequest_cache_expiry() {
+        return request_cache_expiry;
+    }
+
     public void setRequest_cache_expiry(int request_cache_expiry) {
         this.request_cache_expiry = request_cache_expiry;
+    }
+
+    public String getSeason_name() {
+        return season_name;
     }
 
     public void setSeason_name(String season_name) {
         this.season_name = season_name;
     }
 
+    public int getSeason_year() {
+        return season_year;
+    }
+
     public void setSeason_year(int season_year) {
         this.season_year = season_year;
+    }
+
+    public List<SeasonalAnime> getAnime() {
+        return anime;
     }
 
     public void setAnime(List<SeasonalAnime> anime) {

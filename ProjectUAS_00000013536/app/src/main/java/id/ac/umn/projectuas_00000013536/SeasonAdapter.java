@@ -60,17 +60,16 @@ public class SeasonAdapter extends RecyclerView.Adapter<SeasonAdapter.SeasonView
 
         seasonViewHolder.seasonal_title.setText(seasonalAnime.getTitle());
 
+        String pattern = "###,###.###";
+        DecimalFormat decimalFormat = new DecimalFormat(pattern);
+
         if(seasonalAnime.getScore() == 0) {
             seasonViewHolder.seasonal_score.setText("--");
         }
         else {
-            seasonViewHolder.seasonal_score.setText(Double.toString(seasonalAnime.getScore()));
+            seasonViewHolder.seasonal_score.setText(decimalFormat.format(seasonalAnime.getScore()));
         }
-
-        String pattern = "###,###.###";
-        DecimalFormat decimalFormat = new DecimalFormat(pattern);
-        String format = decimalFormat.format(seasonalAnime.getMembers());
-        seasonViewHolder.seasonal_members.setText(format);
+        seasonViewHolder.seasonal_members.setText(decimalFormat.format(seasonalAnime.getMembers()));
 
         seasonViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +77,7 @@ public class SeasonAdapter extends RecyclerView.Adapter<SeasonAdapter.SeasonView
 
                 // Open Detail Activity And Passing ID
                 Intent intent = new Intent(recyclerContext, DetailActivity.class);
-                intent.putExtra("productId", seasonalAnime.getMal_id());
+                intent.putExtra("mal_id", seasonalAnime.getMal_id());
                 recyclerContext.startActivity(intent);
             }
         });

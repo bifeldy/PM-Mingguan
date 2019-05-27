@@ -58,7 +58,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/app_author"
-                android:layout_marginTop="4dp"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:textSize="16sp"
+                android:textColor="@color/gray"
+                android:textAlignment="textEnd"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/partner"
                 android:layout_marginLeft="@dimen/activity_margin"
                 android:layout_marginRight="@dimen/activity_margin"
                 android:textSize="16sp"
@@ -69,10 +78,10 @@
                 android:background="@color/colorAccent"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginBottom="@dimen/activity_margin"
-                android:layout_marginLeft="@dimen/activity_margin"
-                android:layout_marginRight="@dimen/activity_margin" />
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp" />
 
             <ScrollView
                 android:layout_width="match_parent"

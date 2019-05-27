@@ -48,132 +48,132 @@ public class SeasonalAnime {
         return mal_id;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getImage_url() {
-        return image_url;
-    }
-
-    public String getSynopsis() {
-        return synopsis;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public String getAiring_start() {
-        return airing_start;
-    }
-
-    public int getEpisodes() {
-        return episodes;
-    }
-
-    public int getMembers() {
-        return members;
-    }
-
-    public List<Genre> getGenres() {
-        return genres;
-    }
-
-    public String getSource() {
-        return source;
-    }
-
-    public List<Producer> getProducers() {
-        return producers;
-    }
-
-    public double getScore() {
-        return score;
-    }
-
-    public List<String> getLicensors() {
-        return licensors;
-    }
-
-    public boolean isR18() {
-        return r18;
-    }
-
-    public boolean isKids() {
-        return kids;
-    }
-
-    public boolean isContinuing() {
-        return continuing;
-    }
-
     public void setMal_id(int mal_id) {
         this.mal_id = mal_id;
+    }
+
+    public String getUrl() {
+        return url;
     }
 
     public void setUrl(String url) {
         this.url = url;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getImage_url() {
+        return image_url;
     }
 
     public void setImage_url(String image_url) {
         this.image_url = image_url;
     }
 
+    public String getSynopsis() {
+        return synopsis;
+    }
+
     public void setSynopsis(String synopsis) {
         this.synopsis = synopsis;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public void setType(String type) {
         this.type = type;
     }
 
+    public String getAiring_start() {
+        return airing_start;
+    }
+
     public void setAiring_start(String airing_start) {
         this.airing_start = airing_start;
+    }
+
+    public int getEpisodes() {
+        return episodes;
     }
 
     public void setEpisodes(int episodes) {
         this.episodes = episodes;
     }
 
+    public int getMembers() {
+        return members;
+    }
+
     public void setMembers(int members) {
         this.members = members;
+    }
+
+    public List<Genre> getGenres() {
+        return genres;
     }
 
     public void setGenres(List<Genre> genres) {
         this.genres = genres;
     }
 
+    public String getSource() {
+        return source;
+    }
+
     public void setSource(String source) {
         this.source = source;
+    }
+
+    public List<Producer> getProducers() {
+        return producers;
     }
 
     public void setProducers(List<Producer> producers) {
         this.producers = producers;
     }
 
+    public double getScore() {
+        return score;
+    }
+
     public void setScore(double score) {
         this.score = score;
+    }
+
+    public List<String> getLicensors() {
+        return licensors;
     }
 
     public void setLicensors(List<String> licensors) {
         this.licensors = licensors;
     }
 
+    public boolean isR18() {
+        return r18;
+    }
+
     public void setR18(boolean r18) {
         this.r18 = r18;
     }
 
+    public boolean isKids() {
+        return kids;
+    }
+
     public void setKids(boolean kids) {
         this.kids = kids;
+    }
+
+    public boolean isContinuing() {
+        return continuing;
     }
 
     public void setContinuing(boolean continuing) {
